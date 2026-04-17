@@ -1,0 +1,240 @@
+
+        :root {
+            --bg-color: #050505;
+            --primary: #2E6F40; /* Violet */
+            --secondary: #CFFFDC; /* Pink */
+            --tertiary: #68BA7F; /* Blue */
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg-color);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar       linear-gradient(to right, #2E6F40, #CFFFDC, #68BA7F) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+
+        /* Animations */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes textGlow {
+            0%, 100% { text-shadow: 0 0 10px var(--primary), 0 0 20px var(--secondary); }
+            50% { text-shadow: 0 0 20px var(--primary), 0 0 30px var(--secondary); }
+        }
+
+        @keyframes borderSpin {
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Utility Classes */
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #2E6F40, #CFFFDC, #68BA7F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glow-text {
+            animation: textGlow 3s ease-in-out infinite;
+        }
+
+        /* Glassmorphism */
+        .glass-nav {
+            background: rgba(5, 5, 5, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgb(44, 252, 79);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
+            transform: translateY(-5px);
+        }
+
+        /* CSS-only Mobile Menu Hack */
+        #menu-toggle:checked ~ #mobile-menu {
+            max-height: 400px;
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        /* Animated Button */
+        .btn-animated {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-animated::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient( #2E6F40, #CFFFDC, #68BA7F);
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+        .btn-animated:hover::before {
+            opacity: 1;
+        }
+        
+        /* Profile Image Border Animation */
+        .profile-wrapper {
+            position: relative;
+            padding: 4px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            overflow: hidden;
+            animation: blob 8s infinite alternate;
+        }
+        .profile-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: conic-gradient(transparent, transparent, transparent, var(--primary), var(--secondary), var(--tertiary));
+            animation: borderSpin 4s linear infinite;
+        }
+        .profile-inner {
+            position: relative;
+            background: var(--bg-color);
+            border-radius: inherit;
+            overflow: hidden;
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+        }
+		
+		
+		TERMINAL ---------- */
+  #contact { }
+
+  .terminal {
+    background: #09090f;
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 780px;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.6), 0 0 60px rgba(124,106,247,0.08);
+  }
+
+  .terminal-topbar {
+    background: #111119;
+    padding: 0.9rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+  }
+
+  .dot-red { background: #ff5f57; }
+  .dot-yellow { background: #febc2e; }
+  .dot-green { background: #28c840; }
+
+  .terminal-title {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-left: 0.5rem;
+  }
+
+  .terminal-body {
+    padding: 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    line-height: 2;
+    min-height: 300px;
+  }
+
+  .t-line {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .t-prompt { color: var(--accent); }
+  .t-cmd { color: var(--accent2); }
+  .t-out { color: var(--muted2); padding-left: 1.25rem; margin-bottom: 0.5rem; }
+  .t-out a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+  .t-out a:hover { color: var(--accent2); text-decoration: underline; }
+  .t-success { color: #5ef070; }
+
+  .terminal-input-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .terminal-input-row input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--accent2);
+    flex: 1;
+    caret-color: var(--accent2);
+  }
+
+  .cursor-blink {
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    background: var(--accent2);
+    animation: blink 1s step-end infinite;
+    vertical-align: middle;
+    margin-left: 2px;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+    

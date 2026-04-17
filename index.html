@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer | Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased selection:bg-emerald-900 selection:text-white relative">
+
+    <!-- Background Animated Blobs -->
+    <div class="fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-[-1]">
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-emerald-900 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-emerald-700 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold tracking-tighter">
+                        <span class="text-white">MY</span><span class="text-gradient">PORTFOLIO</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-emerald-900 transition-colors px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="hover:text-emerald-900 transition-colors px-3 py-2 text-sm font-medium">About</a>
+                      
+                      <a href="#services" class="hover:text-emerald-900 transition-colors px-3 py-2 text-sm font-medium">Services</a>
+
+                      
+                        <a href="#skills" class="hover:text-emerald-900 transition-colors px-3 py-2 text-sm font-medium">Skills</a>
+                        <a href="#projects" class="hover:text-emerald-900 transition-colors px-3 py-2 text-sm font-medium">Projects</a>
+                        <a href="#contact" class="hover:text-emerald-900 transition-colors px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button (CSS Only) -->
+                <div class="-mr-2 flex md:hidden">
+                    <label for="menu-toggle" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none cursor-pointer">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Content -->
+        <input type="checkbox" id="menu-toggle" class="hidden" />
+        <div id="mobile-menu" class="md:hidden max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out glass-nav px-2 sm:px-3">
+            <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:text-emerald-900 hover:bg-white/5">Home</a>
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:text-emerald-900 hover:bg-white/5">About</a>
+          
+          <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium hover:text-emerald-900 hover:bg-white/5">Services</a>
+
+          
+            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:text-emerald-900 hover:bg-white/5">Skills</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:text-emerald-900 hover:bg-white/5">Projects</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:text-emerald-900 hover:bg-white/5">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+            
+            <!-- Text Content -->
+            <div class="flex-1 text-center lg:text-left z-10">
+               
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Hi, I'm <br />
+                    <span class="text-gradient glow-text">Gilmar Aparece</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl text-gray-300 font-light mb-8">
+                    Creative <span class="text-white font-medium">Web Developer | Building responsive and secure web interfaces</span>
+                </h2>
+                <p class="text-gray-400 max-w-lg mx-auto lg:mx-0 mb-10 text-lg leading-relaxed">
+                    I weave logic and creativity into interactive digital experiences. Specialized in crafting stunning UI/UX with modern web technologies.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="#projects" class="btn-animated px-8 py-3 rounded-full border border-emerald-600 text-white font-medium transition-all hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] w-full sm:w-auto text-center">
+                        Explore Work
+                    </a>
+                    <a href="#contact" class="px-8 py-3 rounded-full border border-white/10 text-gray-300 font-medium transition-all hover:bg-white/5 hover:text-white w-full sm:w-auto text-center">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual Element -->
+            <div class="terminal reveal">
+				<div class="terminal-topbar">
+				  <div class="dot dot-red"></div>
+				  <div class="dot dot-yellow"></div>
+				  <div class="dot dot-green"></div>
+				  <span class="terminal-title">webdeveloper@portfolio ~ Gilmar</span>
+				</div>
+				<div class="terminal-body" id="terminalBody">
+				  <div class="t-line"><span class="t-prompt">gilmar@portfolio</span><span class="t-cmd">Gilmar Aparece</span></div>
+				  <div class="t-out">Web Developer  · Product Builder </div>
+				  <div class="t-line"><span class="t-prompt">webdeveloper@portfolio</span><span class="t-cmd">cat contact.json</span></div>
+				  <div class="t-out">{</div>
+				  <div class="t-out">&nbsp;&nbsp;"email": <a href="mailto:aparecegilmar1@gmail.com">"aparecegilmar1@gmail.com"</a>,</div>
+				  <div class="t-out">&nbsp;&nbsp;"github": <a href="https://github.com/Gilmar-Aparece" target="_blank">"https://github.com/Gilmar-Aparece"</a>,</div>
+				  <div class="t-out">&nbsp;&nbsp;"linkedin": <a href="https://www.linkedin.com/in/gilmar-aparece-54b2b0357/" target="_blank">"https://www.linkedin.com/in/gilmar-aparece-54b2b0357/"</a>,</div>
+				  <div class="t-out">&nbsp;&nbsp;"status": <span class="t-success">"open_to_projects"</span></div>
+				  <div class="t-out">}</div>
+				  <div class="t-line"><span class="t-prompt">webdeveloper@portfolio</span><span class="t-cmd">./say_hello.sh</span></div>
+				  <div class="t-out t-success">✓ Message pipeline ready. Type your message below and press Enter.</div>
+				  <div id="terminalMessages"></div>
+				  <div class="terminal-input-row">
+					<span class="t-prompt">guest@sudantu</span>
+					<input type="text" id="termInput" placeholder="type a message..." autocomplete="off" />
+					<span class="cursor-blink"></span>
+				  </div>
+				</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col items-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">About <span class="text-gradient">Me</span></h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative bg-[#0a0a0a] rounded-xl p-6 ring-1 ring-gray-900/5">
+                        <h3 class="text-2xl font-semibold mb-4 text-emerald-600">My Journey</h3>
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                           I am a detail-oriented WordPress Developer and 3D enthusiast with a passion for building secure, high-performance digital experiences. My journey is rooted in the technical challenge of creating seamless web environments—from architecting complex student capstone projects with 100% uptime to integrating AI-powered security dashboards.                        </p>
+                        <p class="text-gray-400 leading-relaxed">
+                            I believe that a website is a living ecosystem where performance meets security. Whether I’m deep in the Oxygen builder, structuring dynamic data with ACF and CPT UI, or optimizing PayPal gateways for a smooth checkout, my goal is always to bridge the gap between robust functionality and a seamless user experience. When I’m not refining site speed, I’m exploring the world of 3D design and finding new ways to push the boundaries of modern web development.                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="glass-card p-6 rounded-2xl text-center hover:-translate-y-2 transition-transform">
+                        <div class="text-4xl font-bold text-gradient mb-2">4+</div>
+                        <div class="text-sm text-gray-400 uppercase tracking-wider">Years Exp.</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center hover:-translate-y-2 transition-transform">
+                        <div class="text-4xl font-bold text-gradient mb-2">5+</div>
+                        <div class="text-sm text-gray-400 uppercase tracking-wider">Projects</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center hover:-translate-y-2 transition-transform">
+                        <div class="text-4xl font-bold text-gradient mb-2">5+</div>
+                        <div class="text-sm text-gray-400 uppercase tracking-wider">Clients</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center hover:-translate-y-2 transition-transform">
+                        <div class="text-4xl font-bold text-gradient mb-2">100%</div>
+                        <div class="text-sm text-gray-400 uppercase tracking-wider">Passion</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+  <!-- Services Section -->
+<section id="services" class="py-24 px-6 relative">
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="flex flex-col items-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                My <span class="text-gradient">Services</span>
+            </h2>
+            <div class="h-1 w-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Service 1 -->
+            <div class="glass-card p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform">
+                <div class="text-4xl mb-4 text-purple-400">💻</div>
+                <h3 class="text-xl font-semibold mb-3">Frontend Development</h3>
+                <p class="text-gray-400">
+                    Building responsive and modern websites using HTML, CSS and JavaScript.
+                </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="glass-card p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform">
+                <div class="text-4xl mb-4 text-blue-400">🎨</div>
+                <h3 class="text-xl font-semibold mb-3">UI/UX Design</h3>
+                <p class="text-gray-400">
+                    Creating clean, user-friendly and modern UI designs using Figma and design principles.
+                </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="glass-card p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform">
+                <div class="text-4xl mb-4 text-pink-400">⚡</div>
+                <h3 class="text-xl font-semibold mb-3">Website Optimization</h3>
+                <p class="text-gray-400">
+                    Improving website speed, performance and responsiveness for better user experience.
+                </p>
+            </div>
+			<div class="glass-card p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform">
+				<div class="text-4xl mb-4 text-green-400">WP</div>
+				<h3 class="text-xl font-semibold mb-3">WordPress Development</h3>
+				<p class="text-gray-400">
+					Custom theme development using Oxygen, Elementor, and ACF to create scalable, high-performance websites.
+				</p>
+			</div>
+			<div class="glass-card p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform">
+				<div class="text-4xl mb-4 text-orange-400">⚙️</div>
+				<h3 class="text-xl font-semibold mb-3">Backend Development</h3>
+				<p class="text-gray-400">
+					Developing robust server-side logic and databases using PHP and MySQL, including secure API and payment integrations.
+				</p>
+			</div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Skills Section -->
+  <section id="skills" class="py-24 px-6 relative bg-white/[0.02]">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col items-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">My <span class="text-gradient">Arsenal</span></h2>
+            <div class="h-1 w-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full"></div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+            <div class="glass-card px-6 py-4 rounded-full flex items-center gap-3 hover:-translate-y-2 cursor-pointer border-emerald-600 transition-all">
+                <span class="text-orange-500 font-bold text-xl">&lt;/&gt;</span>
+                <span class="font-medium">HTML5</span>
+            </div>
+
+            <div class="glass-card px-6 py-4 rounded-full flex items-center gap-3 hover:-translate-y-2 cursor-pointer border-emerald-600 transition-all">
+                <span class="text-blue-500 font-bold text-xl">#</span>
+                <span class="font-medium">CSS3</span>
+            </div>
+
+            <div class="glass-card px-6 py-4 rounded-full flex items-center gap-3 hover:-translate-y-2 cursor-pointer border-emerald-600 transition-all">
+                <span class="text-yellow-400 font-bold text-xl">JS</span>
+                <span class="font-medium">JavaScript</span>
+            </div>
+
+            <div class="glass-card px-6 py-4 rounded-full flex items-center gap-3 hover:-translate-y-2 cursor-pointer border-cyan-500/30 transition-all">
+                <span class="text-blue-400 font-bold text-xl">Wp</span>
+                <span class="font-medium">WordPress</span>
+            </div>
+
+            <div class="glass-card px-6 py-4 rounded-full flex items-center gap-3 hover:-translate-y-2 cursor-pointer border-teal-500/30 transition-all">
+                <span class="text-indigo-400 font-bold text-xl">🐘</span>
+                <span class="font-medium">PHP</span>
+            </div>
+
+            <div class="glass-card px-6 py-4 rounded-full flex items-center gap-3 hover:-translate-y-2 cursor-pointer border-purple-500/30 transition-all">
+                <span class="text-blue-400 font-bold text-xl">ij</span>
+                <span class="font-medium">JQUERY</span>
+            </div>
+
+            <div class="glass-card px-6 py-4 rounded-full flex items-center gap-3 hover:-translate-y-2 cursor-pointer border-orange-600/30 transition-all">
+                <span class="text-orange-600 font-bold text-xl">⑂</span>
+                <span class="font-medium">GIT</span>
+            </div>
+
+            <div class="glass-card px-6 py-4 rounded-full flex items-center gap-3 hover:-translate-y-2 cursor-pointer border-yellow-500/30 transition-all">
+                <span class="text-blue-500 font-bold text-xl">Py</span>
+                <span class="font-medium">PYTHON</span>
+            </div>
+
+            <div class="glass-card px-6 py-4 rounded-full flex items-center gap-3 hover:-translate-y-2 cursor-pointer border-emerald-500/30 transition-all">
+                <span class="text-emerald-400 font-bold text-xl">V</span>
+                <span class="font-medium">VUE</span>
+            </div>
+
+            <div class="glass-card px-6 py-4 rounded-full flex items-center gap-3 hover:-translate-y-2 cursor-pointer border-green-800/30 transition-all">
+                <span class="text-green-800 font-bold text-xl">dj</span>
+                <span class="font-medium">DJANGO</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col items-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Selected <span class="text-gradient">Works</span></h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-emerald-600 to-emerald-900 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-card h-80">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/50 to-black/80 z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+                    <div class="absolute inset-0 bg-[#111] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/40 via-black to-black transition-transform duration-500 group-hover:scale-110"></div>
+                    
+                    <div class="absolute inset-0 z-20 p-6 flex flex-col justify-end transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex gap-2 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+					     	<span class="text-xs font-semibold px-2 py-1 bg-brown-500/20 text-blue-300 rounded">WORDPRESS</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-pink-500/20 text-pink-300 rounded">PHP</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-white rounded">HTML</span>
+							<span class="text-xs font-semibold px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded">CSS</span>
+							<span class="text-xs font-semibold px-2 py-1 bg-blue-500/20 text-blue-300 rounded">JS</span>
+							<span class="text-xs font-semibold px-2 py-1 bg-yellow-500/20 text-blue-300 rounded">JQUERY</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">BoholWeb</h3>
+                        <p class="text-gray-400 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150 line-clamp-2">
+                           Website security is essential for every online business and personal website. A secure site protects sensitive data, maintains your reputation, and ensures a good user experience. In today’s fast-paced digital world, ignoring security can result in malware infections, poor performance, and a loss of customer trust. To help you secure and improve your site, BoholwebWP provides professional solutions that include strong security measures, malware removal, and speed enhancements.
+                        </p>
+                        <a href="https://boholwebwp.com/" class="inline-flex items-center text-sm font-medium text-purple-400 hover:text-purple-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                            View Project 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-card h-80">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-800/50 to-black/80 z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+                    <div class="absolute inset-0 bg-[#111] bg-[linear-gradient(45deg,_transparent_25%,_rgba(68,107,214,0.1)_50%,_transparent_75%,_transparent_100%)] bg-[length:20px_20px] transition-transform duration-500 group-hover:scale-110"></div>
+                    
+                    <div class="absolute inset-0 z-20 p-6 flex flex-col justify-end transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex gap-2 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                            <span class="text-xs font-semibold px-2 py-1 bg-pink-500/20 text-pink-300 rounded">PHP</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-white rounded">HTML</span>
+							<span class="text-xs font-semibold px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded">CSS</span>
+							<span class="text-xs font-semibold px-2 py-1 bg-blue-500/20 text-blue-300 rounded">JS</span>
+							<span class="text-xs font-semibold px-2 py-1 bg-yellow-500/20 text-blue-300 rounded">JQUERY</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">JunkShop</h3>
+                        <p class="text-gray-400 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150 line-clamp-2">
+                            An intelligent mapping system utilizing geospatial analysis to identify, track, and visualize waste accumulation zones for more efficient urban sanitation
+                        </p>
+                        <a href="https://github.com/Gilmar-Aparece" class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                            View Project 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-card h-80">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/50 to-black/80 z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+                    <div class="absolute inset-0 bg-[#111] [background:radial-gradient(circle_at_center,_rgba(236,72,153,0.1)_0,_transparent_100%)] transition-transform duration-500 group-hover:scale-110"></div>
+                    
+                    <div class="absolute inset-0 z-20 p-6 flex flex-col justify-end transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex gap-2 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                            <span class="text-xs font-semibold px-2 py-1 bg-pink-500/20 text-pink-300 rounded">PHP</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-white rounded">HTML</span>
+							<span class="text-xs font-semibold px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded">CSS</span>
+							<span class="text-xs font-semibold px-2 py-1 bg-blue-500/20 text-blue-300 rounded">JS</span>
+							<span class="text-xs font-semibold px-2 py-1 bg-yellow-500/20 text-blue-300 rounded">JQUERY</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">FCSconnect</h3>
+                        <p class="text-gray-400 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150 line-clamp-2">
+                            Rooted in tradition and sustained by the sea. Our platform showcases the best of local produce, bringing you closer to the dedicated people who grow and catch your food with care.                        </p>
+                        <a href="https://fcsconnect.42web.io/landing-page.php" class="inline-flex items-center text-sm font-medium text-pink-400 hover:text-pink-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                            View Project 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+				<!-- Project 4 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-card h-80">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-950/50 to-black/80 z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+                    <div class="absolute inset-0 bg-[#111] [background:radial-gradient(circle_at_center,_rgba(236,72,153,0.1)_0,_transparent_100%)] transition-transform duration-500 group-hover:scale-110"></div>
+                    
+                    <div class="absolute inset-0 z-20 p-6 flex flex-col justify-end transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex gap-2 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                            <span class="text-xs font-semibold px-2 py-1 bg-pink-500/20 text-pink-300 rounded">PYTHON</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-white rounded">VUE</span>
+							<span class="text-xs font-semibold px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded">DJANGO</span>
+
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">BCC Portal</h3>
+                        <p class="text-gray-400 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150 line-clamp-2">
+                            A Student Portal is a secure, personalized website or online platform that acts as a central hub for everything a student needs during their time at an educational institution (like a college, university, or high school).
+                        </p>
+                        <a href="https://portal.buenavistacommunitycollege.edu.ph/login/?next=/" class="inline-flex items-center text-sm font-medium text-pink-400 hover:text-pink-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                            View Project 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 relative bg-white/[0.01]">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <!-- Decorative background elements -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+                
+                <div class="relative z-10 text-center mb-10">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Let's <span class="text-gradient">Connect</span></h2>
+                    <p class="text-gray-400 max-w-lg mx-auto">Have a project in mind or just want to say hi? Feel free to drop a message.</p>
+                </div>
+
+                <form class="relative z-10 space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-gray-300" for="name">Name</label>
+                            <input type="text" id="name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all" placeholder="Gilmar Aparece">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-gray-300" for="email">Email</label>
+                            <input type="email" id="email" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all" placeholder="aparecegilmar1.com">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-gray-300" for="message">Message</label>
+                        <textarea id="message" rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all resize-none" placeholder="Your message here..."></textarea>
+                    </div>
+                    <button type="button" class="btn-animated w-full py-4 rounded-xl text-white font-bold tracking-wide border border-white/10 hover:border-transparent transition-all"  onclick="sendEmail()">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+   <!-- Footer -->
+<footer class="border-t border-white/5 py-8 text-center relative z-10 bg-black">
+    <div class="flex justify-center space-x-6 mb-6">
+
+        <!-- GitHub -->
+        <a href="https://github.com/Gilmar-Aparece" target="_blank"
+           class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:bg-white/10 transition-all hover:-translate-y-1">
+
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 
+                    9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703
+                    -2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11
+                    -1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 
+                    1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088
+                    .636-1.338-2.22-.253-4.555-1.113-4.555-4.951 
+                    0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 
+                    0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 
+                    6.844c.85.004 1.705.115 2.504.337 
+                    1.909-1.296 2.747-1.027 2.747-1.027.546 
+                    1.379.202 2.398.1 2.651.64.7 1.028 
+                    1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 
+                    4.943.359.309.678.92.678 1.855 
+                    0 1.338-.012 2.419-.012 2.747 
+                    0 .268.18.58.688.482A10.019 
+                    10.019 0 0022 12.017C22 6.484 
+                    17.522 2 12 2z"
+                    clip-rule="evenodd">
+                </path>
+            </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/gilmar-aparece-54b2b0357/" target="_blank"
+           class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-white/10 transition-all hover:-translate-y-1">
+
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 
+                    0 3.5 1.12 1 2.5 1 4.98 2.12 
+                    4.98 3.5zM.5 8h4V24h-4V8zm7.5 
+                    0h3.8v2.2h.1c.5-1 1.9-2.2 
+                    3.9-2.2 4.2 0 5 2.8 5 
+                    6.4V24h-4v-8.4c0-2-.1-4.6-2.8-4.6-2.8 
+                    0-3.2 2.2-3.2 4.4V24h-4V8z">
+                </path>
+            </svg>
+        </a>
+
+        <!-- CodePen -->
+        <a href="https://www.tiktok.com/@gilmar.aparece" target="_blank"
+           class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-pink-400 hover:bg-white/10 transition-all hover:-translate-y-1">
+
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.59-1.01V14.5c0 2.32-.6 4.68-2.38 6.14-1.64 1.35-3.94 1.72-5.99 1.14-2.06-.59-3.72-2.35-4.21-4.43-.53-2.22.12-4.75 1.82-6.31 1.51-1.39 3.69-1.85 5.66-1.35.02-1.29.01-2.58.01-3.88-1.5-.16-3.04.14-4.39 0.84-1.44.75-2.5 2.05-2.88 3.63-.39 1.62-.1 3.39.75 4.8 1.1 1.82 3.19 3 5.32 2.94 2.1-.06 4.09-1.39 4.88-3.34.13-.33.19-.69.19-1.05V.02z"/>
+			</svg>
+        </a>
+
+    </div>
+
+    <p class="text-gray-500 text-sm">
+        © 2026 Gilmar Aparece
+    </p>
+</footer>
+ <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>   
+</body>
+</html>
